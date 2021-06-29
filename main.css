@@ -6,7 +6,7 @@
 
     /* el stretch es el por defecto de esta propiedad, cada elemento abarca todo el ancho posible que puede según la cantidad de columnas*/
     justify-items: stretch; /* Alinea los elementos basado en alcho del contenido de cada elemento (todos alineados en conjunto), sin esto se estirarian los elementos para cubir el 100% segun cantidad de columnas */ 
-align-items: stretch;
+align-items: center;
 }
 
 .grid div {
@@ -16,5 +16,19 @@ align-items: stretch;
 
 .grid div:hover {
     border: 1px solid yellow;
+}
+
+.element1{
+    align-self: start; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
+}
+
+
+.element2{
+    align-self: center; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
+}
+
+
+.element3{
+    align-self: end; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
 }
 
