@@ -1,0 +1,16 @@
+
+/* GALERIA RESPONSIVE SIN MEDIA QUERIES, NI SISTEMA DE COLUMNAS DE BOOTSTRAP, ETC*/
+
+.gallery{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 30rem;
+    grid-template-columns: repeat(auto-fill,minmax(15rem, 1fr));
+}
+
+/* Encuadro la imagen, y la centro, es solo para la practica */
+/* .gallery img{
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+} */
