@@ -3,7 +3,7 @@
 .gallery {
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 30rem;
+    grid-auto-rows: auto;
     /* El auto fit expande cada columna para que se llene la fila, en cambio el auto fill, crea otra columnas (vacias) para rellenar la fila */
     /* Por ejemplo, para comprobar lo de arriba poner en inspeccionar de chrome un ancho de 6mil, y observar que con fill queda un espacio vacio y con fit todos los elementos toman un poco y rellenan toda la fila */
     /* primero toma el min, si debe tomar más lo toma (por q el fr toma el espacio disponible) */
@@ -12,19 +12,14 @@
     eso se soluciona poniendo la función min como el primer parametro de minmax() */
     /* Esto intenta abarcar los 25rem, pero si no puede ocupa el 100% de su contenedor para que no haya overflow y no se tenga que scrollear horizontalmente para ver toda la imagen por ej */
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
-/* Tambien está la funcion max, y la clamp, que toma un minimo, ideal y max, se puede usar para el font size */
+    /* Tambien está la funcion max, y la clamp, que toma un minimo, ideal y max, se puede usar para el font size */
+    /* Por ejemplo, Si ponemos el inspector en 768px, podemos observar que la primer card ocupa los 25rem, y las otras dos se compactan para entrar y la ultima ocupa las 4 lineas, la fila entera */
+    /* en conjunto con element4 funciona */
+    grid-auto-flow: dense;
 }
 
-/* Encuadro la imagen, y la centro, es solo para la practica */
+/*ocupa una fila entera */
 
-/* .gallery img{
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-} */
-
-.gallery .element7 {
-    width: 100%;
-    height: 147px;
-    margin: 0 auto;
+.element4 {
+    grid-column: 1/4;
 }
