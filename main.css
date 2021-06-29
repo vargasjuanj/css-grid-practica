@@ -12,3 +12,16 @@
 .grid div:hover {
     border: 1px solid yellow;
 }
+
+.grid-anidada{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-auto-rows: 100px; /* ancho de 100px a cada fila */
+    gap: 1rem;
+}
+
+.grid-anidada div{
+    border: 1px solid black;
+    background: coral;
+    padding: 1rem;
+}
