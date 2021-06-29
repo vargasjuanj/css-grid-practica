@@ -32,3 +32,19 @@ align-items: center;
     align-self: end; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
 }
 
+.element4{
+    justify-self: start; 
+    
+}
+
+
+.element5{
+    justify-self: center; 
+}
+
+
+.element6{
+    justify-self: end; 
+}
+
+
