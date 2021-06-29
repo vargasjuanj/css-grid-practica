@@ -1,13 +1,13 @@
 @import 'gallery.css';
 .grid {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    grid-auto-rows: minmax(100px,auto);
-
+    grid-auto-rows: minmax(100px, auto);
     /* el stretch es el por defecto de esta propiedad, cada elemento abarca todo el ancho posible que puede según la cantidad de columnas*/
-    justify-items: stretch; /* Alinea los elementos basado en alcho del contenido de cada elemento (todos alineados en conjunto), sin esto se estirarian los elementos para cubir el 100% segun cantidad de columnas */ 
-align-items: stretch;
+    justify-items: stretch;
+    /* Alinea los elementos basado en alcho del contenido de cada elemento (todos alineados en conjunto), sin esto se estirarian los elementos para cubir el 100% segun cantidad de columnas */
+    align-items: stretch;
 }
 
 .grid div {
@@ -19,15 +19,17 @@ align-items: stretch;
     border: 1px solid yellow;
 }
 
-.element1{ 
-    grid-column: 1/3; /* abajarca las 3  lineas de forma vertical de la 1 a la 3ra, entre elementos. Va a quedar un espacio porque el segundo elemento abarca 3 también, no entra acá*/
+.element1 {
+    grid-column: 1/3;
+    /* abajarca las 3  lineas de forma vertical de la 1 a la 3ra, entre elementos. Va a quedar un espacio porque el segundo elemento abarca 3 también, no entra acá*/
     grid-row: 1/3;
 }
 
-.element2{
+.element2 {
     grid-column: 1/3;
 }
 
-.element3{
-    grid-column: 2/4; /* deja espacio vacio a la izquierda */
+.element3 {
+    grid-column: 2/4;
+    /* deja espacio vacio a la izquierda */
 }

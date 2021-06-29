@@ -5,7 +5,9 @@
     display: grid;
     gap: 1rem;
     grid-auto-rows: 30rem;
-    grid-template-columns: repeat(auto-fill,minmax(15rem, 1fr));
+    /* El auto fit expande cada columna para que se llene la fila, en cambio el auto fill, crea otra columnas (vacias) para rellenar la fila */
+   /* para comprobar lo de arriba poner en inspeccionar de chrome un ancho de 6mil, y observar que con fill queda un espacio vacio y con fit todos los elementos toman un poco y rellenan toda la fila */
+    grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
 }
 
 /* Encuadro la imagen, y la centro, es solo para la practica */
@@ -14,3 +16,9 @@
     height: 250px;
     margin: 0 auto;
 } */
+
+.gallery .element7 {
+    width: 100%;
+    height: 147px;
+    margin: 0 auto;
+}
