@@ -18,33 +18,10 @@ align-items: center;
     border: 1px solid yellow;
 }
 
-.element1{
-    align-self: start; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
+.element1{ 
+    grid-column: 1/3; /* abajarca las 3  lineas de forma vertical de inicio a la 3ra, entre elementos. Va a quedar un espacio porque el segundo elemento abarca 3 también, no entra acá*/
 }
-
 
 .element2{
-    align-self: center; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
+    grid-column: 1/3;
 }
-
-
-.element3{
-    align-self: end; /* dentro de su propio espacio de contenedor, lo envia al final, inicio o centro con align-self */
-}
-
-.element4{
-    justify-self: start; 
-    
-}
-
-
-.element5{
-    justify-self: center; 
-}
-
-
-.element6{
-    justify-self: end; 
-}
-
-
