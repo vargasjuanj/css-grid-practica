@@ -1,16 +1,22 @@
-
 /* GALERIA RESPONSIVE SIN MEDIA QUERIES, NI SISTEMA DE COLUMNAS DE BOOTSTRAP, ETC*/
 
-.gallery{
+.gallery {
     display: grid;
     gap: 1rem;
     grid-auto-rows: 30rem;
     /* El auto fit expande cada columna para que se llene la fila, en cambio el auto fill, crea otra columnas (vacias) para rellenar la fila */
-   /* para comprobar lo de arriba poner en inspeccionar de chrome un ancho de 6mil, y observar que con fill queda un espacio vacio y con fit todos los elementos toman un poco y rellenan toda la fila */
-    grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+    /* Por ejemplo, para comprobar lo de arriba poner en inspeccionar de chrome un ancho de 6mil, y observar que con fill queda un espacio vacio y con fit todos los elementos toman un poco y rellenan toda la fila */
+    /* primero toma el min, si debe tomar más lo toma (por q el fr toma el espacio disponible) */
+    /*grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr)); */
+    /* Cuando hay overflow, es decir si el ancho minimo de la propiedad comentada de arriba, no cabe en el viewport, vamos a tener que scrollear para ver el elemento completo
+    eso se soluciona poniendo la función min como el primer parametro de minmax() */
+    /* Esto intenta abarcar los 25rem, pero si no puede ocupa el 100% de su contenedor para que no haya overflow y no se tenga que scrollear horizontalmente para ver toda la imagen por ej */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+/* Tambien está la funcion max, y la clamp, que toma un minimo, ideal y max, se puede usar para el font size */
 }
 
 /* Encuadro la imagen, y la centro, es solo para la practica */
+
 /* .gallery img{
     width: 250px;
     height: 250px;
