@@ -1,27 +1,20 @@
 .grid {
     display: grid; 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    grid-template-rows: minmax(20px,auto);
+    grid-auto-rows: minmax(100px,auto);
+
+    /* el stretch es el por defecto de esta propiedad, cada elemento abarca todo el ancho posible que puede según la cantidad de columnas*/
+    justify-items: stretch; /* Alinea los elementos basado en alcho del contenido de cada elemento (todos alineados en conjunto), sin esto se estirarian los elementos para cubir el 100% segun cantidad de columnas */ 
+align-items: stretch;
 }
 
 .grid div {
-    padding: 1rem;
+    border: 1px solid black;
+    background: coral;
 }
 
 .grid div:hover {
     border: 1px solid yellow;
 }
 
-.grid-anidada{
-    display: grid;
-    grid-template-columns: repeat(3,1fr) ;
-    grid-auto-rows: 100px; /* ancho de 100px a cada fila */
-    gap: 1rem;
-}
-
-.grid-anidada div{
-    border: 1px solid black;
-    background: coral;
-    padding: 1rem;
-}
